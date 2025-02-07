@@ -1,0 +1,17 @@
+AllCops:
+  Exclude:
+    - test/*
+    - .git
+    - .vscode
+    - Gemfile
+
+inherit_mode:
+  merge:
+    - Exclude
+
+Documentation:
+  Enabled: false
+Metrics/MethodLength:
+  Max: 1000
+Style/FrozenStringLiteralComment:
+  Enabled: false
