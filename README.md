@@ -4,12 +4,13 @@ A boilerplate for Sketchup extension with React
 
 ## Structure
 
+```sh
 .
 ├── src/
 │ ├── ts/
 │ │ ├── components/
 │ │ │ ├── App.tsx
-│ │ │ └── **tests**/
+│ │ │ └── __tests__/
 │ │ │ └── App.test.tsx
 │ │ ├── types/
 │ │ │ └── sketchup.d.ts
@@ -35,6 +36,7 @@ A boilerplate for Sketchup extension with React
 ├── Rakefile
 ├── .rubocop.yml
 └── my_extension.rb
+```
 
 ## Install dependencies
 
