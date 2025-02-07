@@ -1,5 +1,5 @@
 {
-  "cSpell.words": ["messagebox"],
+  "cSpell.words": ["messagebox", "rubyzip"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
   "[javascript]": {
@@ -10,5 +10,9 @@
   },
   "[typescript]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[ruby]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
   }
 }

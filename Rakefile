@@ -34,6 +34,7 @@ task :build => [:test_all, :build_frontend] do
 
     Dir.glob('dist/**/*').each do |file|
       next if File.directory?(file)
+
       zipfile.add(file, file)
     end
 

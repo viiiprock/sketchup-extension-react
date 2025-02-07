@@ -19,7 +19,7 @@ A boilerplate for Sketchup extension with React
 │ ├── tests/
 │ │ ├── test_helper.rb
 │ │ ├── test_dialog_helper.rb
-│ │ └── test_main.rb
+│ │ └── test_loader.rb
 │ ├── loader.rb
 │ └── dialog_helper.rb
 ├── public/
