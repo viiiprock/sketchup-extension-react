@@ -13,6 +13,12 @@ Documentation:
   Enabled: false
 Metrics/MethodLength:
   Max: 1000
+Metrics/BlockLength:
+  AllowedMethods: ["describe", "context"]
+  Exclude:
+    - "Rakefile"
+    - "**/*.rake"
+    - "test/**/*.rb"
 Style/FrozenStringLiteralComment:
   Enabled: false
 Style/StringLiterals:

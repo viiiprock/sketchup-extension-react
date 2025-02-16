@@ -1,5 +1,3 @@
-require "sketchup"
-
 module MyExtension
   module Main
     def self.show_dialog

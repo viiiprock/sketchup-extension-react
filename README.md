@@ -15,11 +15,11 @@ A boilerplate for Sketchup extension with React
 │ │ ├── types/
 │ │ │ └── sketchup.d.ts
 │ │ └── main.tsx
-│ └── ruby/
+│ └── rb/
 │ ├── tests/
-│ │ ├── test_helper.rb
 │ │ ├── test_dialog_helper.rb
-│ │ └── test_loader.rb
+│ │ ├── test_loader.rb
+│ │ └── test_helper.rb # helper for mocking Sketchup API
 │ ├── loader.rb
 │ └── dialog_helper.rb
 ├── public/
@@ -54,19 +54,29 @@ Build once `yarn build`
 
 Or watch for changes `yarn watch`
 
+## Formatting
+
+Auto format enable fot VSCode
+The TS formats via prettier extension, Ruby formats via vscode-rubocop extension
+
 ## Testing
 
+For ruby test, better build the frontend first
+
 ```sh
-# Run all tests (will build frontend first)
+# Run all tests
 yarn test:all
 
-# Run only Ruby tests (will build frontend first)
+# Run only Ruby tests
 yarn test:ruby
 
 # Run only frontend tests
 yarn test
 
 ```
+
+To run specific ruby test, run
+`rake test TEST=path/to/file.rb`
 
 ## Packaging
 
