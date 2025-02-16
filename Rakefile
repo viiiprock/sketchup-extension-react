@@ -18,37 +18,37 @@ task test_all: %i[test test_frontend]
 
 desc "Run frontend tests"
 task :test_frontend do
-  sh "yarn test"
+  sh "yarn test -u"
 end
 
-# desc "Build frontend assets"
-# task :build_frontend do
-#   sh "yarn build"
-# end
+desc "Build frontend assets"
+task :build_frontend do
+  sh "yarn build"
+end
 
-# desc "Build extension package"
-# task build: %i[test_all build_frontend] do
-#   package_json = JSON.parse(File.read("package.json"))
-#   version = package_json["version"]
-#   extension_name = "my_extension_#{version}.rbz"
+desc "Build extension package"
+task build: %i[test_all build_frontend] do
+  # package_json = JSON.parse(File.read("package.json"))
+  # version = package_json["version"]
+  extension_name = "my_extension.rbz"
 
-#   File.delete(extension_name) if File.exist?(extension_name)
+  File.delete(extension_name) if File.exist?(extension_name)
 
-#   Zip::File.open(extension_name, create: true) do |zipfile|
-#     Dir
-#       .glob("src/ruby/**/*.rb")
-#       .each { |file| zipfile.add(file.sub("src/", ""), file) }
+  Zip::File.open(extension_name, create: true) do |zipfile|
+    Dir
+      .glob("src/ruby/**/*.rb")
+      .each { |file| zipfile.add(file.sub("src/", ""), file) }
 
-#     Dir
-#       .glob("dist/**/*")
-#       .each do |file|
-#         next if File.directory?(file)
+    Dir
+      .glob("dist/**/*")
+      .each do |file|
+        next if File.directory?(file)
 
-#         zipfile.add(file, file)
-#       end
+        zipfile.add(file, file)
+      end
 
-#     zipfile.add("my_extension.rb", "my_extension.rb")
-#   end
+    zipfile.add("my_extension.rb", "my_extension.rb")
+  end
 
-#   puts "Extension package created: #{extension_name}"
-# end
+  puts "Extension package created: #{extension_name}"
+end

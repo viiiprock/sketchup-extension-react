@@ -6,7 +6,7 @@
   "scripts": {
     "watch": "tsc && vite build --watch",
     "build": "tsc && vite build",
-    "test": "vitest",
+    "test": "vitest --watch false",
     "test:coverage": "vitest run --coverage",
     "test:ruby": "rake test",
     "test:all": "vitest run && rake test",
